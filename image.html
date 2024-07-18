@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Hover Scale</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+        }
+        .image-container {
+            position: relative;
+            width: 200px; 
+            height: 200px; 
+            overflow: hidden;
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        .image-container:hover img {
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://t4.ftcdn.net/jpg/05/57/29/25/360_F_557292539_2kXYz0frOcCGISoYEd2MNTmxyT0lYyOj.jpg" alt="Image">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .input-field {
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>User Information</h2>
+
+<form>
+    <label for="firstName">First Name:</label><br>
+    <input type="text" id="firstName" class="input-field"><br>
+    <label for="lastName">Last Name:</label><br>
+    <input type="text" id="lastName" class="input-field">
+</form>
+
+<script>
+    const inputFields = document.querySelectorAll('.input-field');
+
+    inputFields.forEach(field => {
+        field.addEventListener('focus', (event) => {
+            event.target.style.backgroundColor = '#e0f7fa';
+        });
+
+        field.addEventListener('blur', (event) => {
+            event.target.style.backgroundColor = '';
+        });
+    });
+</script>
+
+</body>
+</html>
